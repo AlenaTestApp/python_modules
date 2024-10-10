@@ -1,0 +1,26 @@
+#!/usr/bin/env python3
+def nr_args(args):
+    len_arg = len(args)
+    if len_arg == 0:
+        return f"{len_arg} arguments."
+    elif len_arg == 1:
+        return f"1 argument:\n1: {args[0]}"
+    else:
+        res = f"{len_arg} arguments:\n"
+        for i, arg in enumerate(args, 1):
+            line = f"{i}: {arg}\n"
+            res += line
+        return res
+
+args = ''
+print(nr_args(args))
+print('==============================')
+args = ["webdriver"]
+print(nr_args(args))
+print('==============================')
+args = ["webdriver", "camp"]
+print(nr_args(args))
+print('==============================')
+args = ["first", "second", "third"]
+print(nr_args(args))
+print('==============================')
