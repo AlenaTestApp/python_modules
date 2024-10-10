@@ -1,0 +1,7 @@
+#!/usr/bin/env python3
+def sum_args(*args):
+	return sum(args)
+
+print(sum_args(1,2,3))
+print(sum_args(1,2,-3))
+print(sum_args(100,200,300))
